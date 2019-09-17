@@ -6,7 +6,7 @@ Leet Code 刷题笔记 - - 不求最快最省，但求最简最优雅 ✒，Simp
 - 欢迎加入**QQ交流群**：902025048 [∷二维码](QR.png) 群内提供更多相关资料~
 
 # 题库解析
-此专栏追求代码的**精简**和**技巧性**，默认已看过题目，🤖 没看过的话点标题可以跳转链接，一起体验炫酷的 Cpp
+此专栏追求代码的**精简**和**技巧性**，默认已看过题目，🤖 没看过的话点标题可以跳转链接，一起体验炫酷的 C++
 
 ## [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 ```cpp
