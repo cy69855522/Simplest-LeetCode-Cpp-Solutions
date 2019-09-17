@@ -24,3 +24,45 @@ public:
 ```
 - 逆遍历字符串并替换 `.` 为 `[.]`
 - 本题若正遍历，每次替换完，下一个字符会变成 `.`，进入死循环
+## [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+```cpp
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* left;
+    Node* right;
+    Node* next;
+
+    Node() {}
+
+    Node(int _val, Node* _left, Node* _right, Node* _next) {
+        val = _val;
+        left = _left;
+        right = _right;
+        next = _next;
+    }
+};
+*/
+class Solution {
+public:
+    Node* connect(Node* root) {
+        if(root and root->left){
+            root->left->next = root->right;
+            
+            if(root->next){
+                root->right->next = root->next->left;
+            }
+            
+            connect(root->left);
+            connect(root->right);
+        }
+        return root;
+    }
+};
+```
+- 对于任意一次递归，只需要考虑如何设置子节点的 next 属性：
+	- 将左子节点连接到右子节点
+	- 将右子节点连接到 `root.next` 的左子节点
+	- 递归左右节点
