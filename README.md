@@ -8,22 +8,6 @@ Leet Code 刷题笔记 - - 不求最快最省，但求最简最优雅 ✒，Simp
 # 题库解析
 此专栏追求代码的**精简**和**技巧性**，默认已看过题目，🤖 没看过的话点标题可以跳转链接，一起体验炫酷的 Cpp
 
-## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)
-```cpp
-class Solution {
-public:
-    string defangIPaddr(string address) {
-        for(int i = address.size(); i >= 0; i--){
-            if(address[i] == '.'){
-                address.replace(i, 1, "[.]");
-            }
-        }
-        return address;
-    }
-};
-```
-- 逆遍历字符串并替换 `.` 为 `[.]`
-- 本题若正遍历，每次替换完，下一个字符会变成 `.`，进入死循环
 ## [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 ```cpp
 /*
@@ -64,3 +48,19 @@ public:
 	- 将左子节点连接到右子节点
 	- 将右子节点连接到 `root.next` 的左子节点
 	- 递归左右节点
+## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)
+```cpp
+class Solution {
+public:
+    string defangIPaddr(string address) {
+        for(int i = address.size(); i >= 0; i--){
+            if(address[i] == '.'){
+                address.replace(i, 1, "[.]");
+            }
+        }
+        return address;
+    }
+};
+```
+- 逆遍历字符串并替换 `.` 为 `[.]`
+- 本题若正遍历，每次替换完，下一个字符会变成 `.`，进入死循环
