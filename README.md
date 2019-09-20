@@ -12,7 +12,7 @@ Leet Code 刷题笔记 - - 不求最快最省，但求最简最优雅 ✒，Simp
 # 题库解析
 此专栏追求代码的**精简**和**技巧性**，默认已看过题目，🤖 没看过的话点标题可以跳转链接，一起体验炫酷的 C++
 
-## [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+## [116. Populating Next Right Pointers in Each Node 递归](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 ```cpp
 /*
 // Definition for a Node.
@@ -52,7 +52,7 @@ public:
 	- 将左子节点连接到右子节点
 	- 将右子节点连接到 `root.next` 的左子节点
 	- 递归左右节点
-## [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)
+## [117. Populating Next Right Pointers in Each Node II 递归](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)
 ```cpp
 /*
 // Definition for a Node.
@@ -98,7 +98,7 @@ public:
 	- 有一个子节点：将这个子节点的 `next` 属性设置为同层的下一个节点，即为 `root.next` 的最左边的一个节点，如果 `root.next` 没有子节点，则考虑 `root.next.next`，依次类推
 	- 有两个节点：左子节点指向右子节点，然后右子节点同第二种情况的做法
 - 注意递归的顺序需要从右到左
-## [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+## [236. Lowest Common Ancestor of a Binary Tree 递归](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -119,7 +119,16 @@ public:
 };
 ```
 - 递归全部节点，p 的祖先节点全部返回 p，q 的祖先节点全部返回 q，如果它同时是俩个节点的最近祖先，那么返回自身，否则返回 nullptr
-## [1108. Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/)
+## [461. Hamming Distance 异或](https://leetcode.com/problems/hamming-distance/submissions/)
+```cpp
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        return bitset<32>(x ^ y).count();
+    }
+};
+```
+## [1108. Defanging an IP Address 逆遍历](https://leetcode.com/problems/defanging-an-ip-address/)
 ```cpp
 class Solution {
 public:
