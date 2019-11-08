@@ -255,7 +255,7 @@ public:
     }
 };
 ```
-## [709. To Lower Case](https://leetcode.com/problems/to-lower-case/)
+## [709. To Lower Case ASCII码](https://leetcode.com/problems/to-lower-case/)
 ```cpp
 class Solution {
 public:
