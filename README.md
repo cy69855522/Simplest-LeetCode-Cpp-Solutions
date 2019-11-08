@@ -255,6 +255,17 @@ public:
     }
 };
 ```
+## [709. To Lower Case](https://leetcode.com/problems/to-lower-case/)
+```cpp
+class Solution {
+public:
+    string toLowerCase(string str) {
+        for(auto& c: str) c = c < 'a' ? c + 32 : c;
+        return str;
+    }
+};
+```
+- 利用 ASCII 修改字符
 ## [973. K Closest Points to Origin 快速选择](https://leetcode.com/problems/k-closest-points-to-origin/)
 ```cpp
 class Solution {
