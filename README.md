@@ -8,7 +8,7 @@ Leet Code 刷题笔记 - - 不求最快最省，但求最简最优雅 ✒，Simp
 
 # 推荐
 - 🐍 [ LeetCode最短Python题解 ](https://github.com/cy69855522/Shortest-LeetCode-Python-Solutions)
-- 🐟 [ 初级算法 ]()
+- 🐟 [ 初级算法 ](#初级算法)
 
 # 题库解析
 此专栏追求代码的**精简**和**技巧性**，默认已看过题目，🤖 没看过的话点标题可以跳转链接，一起体验炫酷的 C++
