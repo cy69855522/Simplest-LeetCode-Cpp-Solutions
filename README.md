@@ -1,4 +1,4 @@
-# 🐱‍👤 Simplest-LeetCode-Cpp-Solutions
+# 👻 Simplest-LeetCode-Cpp-Solutions
 Leet Code 刷题笔记 - - 不求最快最省，但求最简最优雅 ✒，Simpler is better here.
 
 # 前言
@@ -329,3 +329,17 @@ public:
 };
 ```
 - `unique` 函数可以将有序向量的重复项移至末尾，如 `1123445` → `1234514`，并返回**指向去重后容器中不重复序列的最后一个元素的下一个元素的迭代器**
+### [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int profit = 0;
+        for(int i = 0; i + 1 < prices.size(); ++i) profit += max(prices[i + 1] - prices[i], 0);
+        return profit;
+    }
+};
+```
+- 每次买完股票，第二天就出售掉
+- 只要明天股票价格比今天高，今天就买入
+- 买入和出售可以发生在同一天
