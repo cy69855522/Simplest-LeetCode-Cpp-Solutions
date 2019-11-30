@@ -318,7 +318,7 @@ public:
 - 本题若正遍历，每次替换完，下一个字符会变成 `.`，进入死循环
 # 探索
 ## 初级算法
-### [26. 删除排序数组中的重复项 2行](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+### [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 ```cpp
 class Solution {
 public:
