@@ -368,3 +368,14 @@ public:
 	- 把左部分翻转
 	- 把右部分翻转
 	- 最后把整体翻转
+### [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        set s(nums.begin(), nums.end());
+        return s.size() != nums.size();
+    }
+};
+```
+- 利用集合排除重复元素，然后对比尺寸
