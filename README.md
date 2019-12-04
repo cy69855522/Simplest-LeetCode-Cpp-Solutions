@@ -379,3 +379,15 @@ public:
 };
 ```
 - 利用集合排除重复元素，然后对比尺寸
+### [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
+```cpp
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        return accumulate(begin(nums), end(nums), 0, bit_xor<int>());
+    }
+};
+```
+- 这里用到了异或（xor），相同的数字异或后为`0`
+- `0`异或任何数都等于那个数
+- `accumulate`函数对整个序列进行递进式计算。每次计算都使用函数`bit_xor<int>`，以上次累积结果和当前数字作为参数，并将计算结果用于下次计算，有点递归的意思
