@@ -421,3 +421,15 @@ public:
 - O(N)时间 O(1)额外空间
 - 从向量末尾开始逐个` + carry`，并计算是否进位
 - 如果`for`循环之后`vector`首位为`0`，则代表最后一次计算需要进位
+### [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
+```cpp
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        for(int i=0, j=0; j<nums.size(); ++j) if(nums[j]) swap(nums[j], nums[i++]);
+    }
+};
+```
+- 指针`i`指向下一个不为`0`的数字应该出现的位置
+- 指针`j`指向当前遍历到的数字
+- 当`nums[j]`不为`0`，则将其与`nums[i]`交换，因为`j`是从左开始遍历，故保持了相对顺序
