@@ -318,7 +318,8 @@ public:
 - 本题若正遍历，每次替换完，下一个字符会变成 `.`，进入死循环
 # 探索
 ## 初级算法
-### [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
+### 数组
+#### [26. 删除排序数组中的重复项](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/)
 ```cpp
 class Solution {
 public:
@@ -329,7 +330,7 @@ public:
 };
 ```
 - `unique` 函数可以将有序向量的重复项移至末尾，如 `1123445` → `1234514`，并返回**指向去重后容器中不重复序列的最后一个元素的下一个元素的迭代器**
-### [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+#### [122. 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
 ```cpp
 class Solution {
 public:
@@ -343,7 +344,7 @@ public:
 - 每次买完股票，第二天就出售掉
 - 只要明天股票价格比今天高，今天就买入
 - 买入和出售可以发生在同一天
-### [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
+#### [189. 旋转数组](https://leetcode-cn.com/problems/rotate-array/)
 ```cpp
 class Solution {
 public:
@@ -368,7 +369,7 @@ public:
 	- 把左部分翻转
 	- 把右部分翻转
 	- 最后把整体翻转
-### [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)
+#### [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/)
 ```cpp
 class Solution {
 public:
@@ -379,7 +380,7 @@ public:
 };
 ```
 - 利用集合排除重复元素，然后对比尺寸
-### [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
+#### [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/)
 ```cpp
 class Solution {
 public:
@@ -391,7 +392,7 @@ public:
 - 这里用到了异或（xor），就是把数字的二进制形式按位计算，相同为1不同为0，然后返回位运算后的二进制代表的数字，那么相同的数字异或后为`0`
 - `0`异或任何数都等于那个数，所以用`0`做起始值不会对结果有影响
 - `accumulate`函数对整个序列进行递进式计算。每次计算都使用函数`bit_xor<int>`，以上次累积结果和当前数字作为参数，并将计算结果用于下次计算，有点递归的意思
-### [350. 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)
+#### [350. 两个数组的交集 II](https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/)
 ```cpp
 class Solution {
 public:
@@ -404,7 +405,7 @@ public:
 };
 ```
 - 直接将两个排序后的向量视为集合，取`{x|x∈a∧x∈b}`即可
-### [66. 加一](https://leetcode-cn.com/problems/plus-one/)
+#### [66. 加一](https://leetcode-cn.com/problems/plus-one/)
 ```cpp
 class Solution {
 public:
@@ -421,7 +422,7 @@ public:
 - O(N)时间 O(1)额外空间
 - 从向量末尾开始逐个` + carry`，并计算是否进位
 - 如果`for`循环之后`vector`首位为`0`，则代表最后一次计算需要进位
-### [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
+#### [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/)
 ```cpp
 class Solution {
 public:
@@ -433,7 +434,7 @@ public:
 - 指针`i`指向下一个不为`0`的数字应该出现的位置
 - 指针`j`指向当前遍历到的数字
 - 当`nums[j]`不为`0`，则将其与`nums[i]`交换，因为`j`是从左开始遍历，故保持了相对顺序
-### [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
+#### [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
 ```cpp
 class Solution {
 public:
@@ -457,7 +458,7 @@ public:
         - b.计算`target - nums[i - 1]`，此时`i`的值为`用于赋值的值 + 1`，所以`i - 1 = 用于赋值的值`
         - c.写入哈希表
         - 此行代码等同于`m[target - nums[i]] = i; i++;`
-### [36. 有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)
+#### [36. 有效的数独](https://leetcode-cn.com/problems/valid-sudoku/)
 ```cpp
 class Solution {
 public:
@@ -479,7 +480,7 @@ public:
 };
 ```
 - 利用集合判断是否重复
-### [48. 旋转图像](https://leetcode-cn.com/problems/rotate-image/)
+#### [48. 旋转图像](https://leetcode-cn.com/problems/rotate-image/)
 ```cpp
 class Solution {
 public:
@@ -494,3 +495,13 @@ public:
 - 时间 O(N^2) 空间 O(1)
 - 前俩行转置矩阵
 - 最后一行做左右镜像
+### 字符串
+#### [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/)
+```python
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        reverse(s.begin(), s.end());
+    }
+};
+```
