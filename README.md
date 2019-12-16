@@ -533,3 +533,15 @@ public:
 ```
 - 利用哈希表对所有字符计数
 - 遍历字符串返回第一个唯一字符索引
+#### [242. 有效的字母异位词](https://leetcode-cn.com/problems/valid-anagram/solution/ke-yi-yong-sort-by-qing-ruo-xia-hua/)
+```cpp
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+        return s == t;
+    }
+};
+```
+- 利用排序消除异位
