@@ -545,3 +545,18 @@ public:
 };
 ```
 - 利用排序消除异位
+#### [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/)
+```cpp
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        string str = "";
+        for(auto c: s) if(isalnum(c)) str += tolower(c);
+        for(int i=0, m=str.size(); i<m/2; ++i)
+            if(str[i] != str[m-1-i]) return false;
+        return true;
+    }
+};
+```
+- 首先利用`isalnum`函数排除非字母数字，并利用`tolower`将所有字母转为小写
+- 然后镜像对比处理后的字符串
