@@ -560,3 +560,16 @@ public:
 ```
 - 首先利用`isalnum`函数排除非字母数字，并利用`tolower`将所有字母转为小写
 - 然后镜像对比处理后的字符串
+#### [8. 字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+```cpp
+class Solution {
+public:
+    int myAtoi(string str) {
+        int r = 0;
+        stringstream ss;
+        ss << str;
+        ss >> r;
+        return r;
+    }
+};
+```
