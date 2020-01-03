@@ -573,6 +573,30 @@ public:
     }
 };
 ```
+#### [38. 外观数列](https://leetcode-cn.com/problems/count-and-say/)
+```cpp
+class Solution {
+public:
+    string countAndSay(int n) {
+        if(n == 1) return "1";
+        string s = countAndSay(n - 1), res = "";
+        char pre=s[0];
+        int count = 0;
+        for(auto c: s){
+            if(pre == c){
+                ++count;
+            } else {
+                if(count != 0) res += to_string(count) + pre;
+                pre = c;
+                count = 1;
+            }
+        }
+
+        return res + to_string(count) + pre;
+    }
+};
+```
+- 递归
 
 # 常用函数
 - `stoi` 转换字符串到整数
